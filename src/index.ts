@@ -3,7 +3,7 @@ import express from "express";
 import productRouter from "./routes/productRoutes";
 import { errorHandler } from "./middlewares/errorHandler";
 
-const PORT = PORT || 9000;
+const PORT: number = PORT || 8000;
 
 const app = express();
 app.use(express.json());
