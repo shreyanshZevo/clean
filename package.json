@@ -7,12 +7,14 @@
     "build": "npx tsc",
     "start": "node build/index.js",
     "dev": "nodemon src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cm": "cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cz": "^1.8.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "inversify": "^6.0.2",
@@ -20,11 +22,25 @@
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.8",
     "@types/pg": "^8.11.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.11",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
